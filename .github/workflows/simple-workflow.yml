@@ -12,13 +12,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        with:
+          input_secret: ${{ secrets.SEGREDO_SECRETO }} # SECRET AS AN INPUT FOR ACTION
+        uses: actions/checkout@v4
 
       - name: Run a one-line script
-        with:
-          input_secret: ${{ secrets.SEGREDO_SECRETO }}
         env:
-          environment_variable_secret: ${{ secrets.SEGREDO_SECRETO }}
+          environment_variable_secret: ${{ secrets.SEGREDO_SECRETO }} # SECRET AS ENVIRONMENT VARIABLE
         run: echo Hello, world!
 
       - name: Run a multi-line script
