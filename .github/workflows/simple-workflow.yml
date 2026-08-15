@@ -13,9 +13,9 @@ jobs:
 
     steps:
       - name: Checkout
+        uses: actions/checkout@v4
         with:
           lfs: ${{ secrets.LFS_SECRET }} # SECRET AS AN INPUT FOR ACTION
-        uses: actions/checkout@v4
 
       - name: Run a one-line script
         env:
