@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Checkout
         with:
-          input_secret: ${{ secrets.SEGREDO_SECRETO }} # SECRET AS AN INPUT FOR ACTION
+          lfs: ${{ secrets.LFS_SECRET }} # SECRET AS AN INPUT FOR ACTION
         uses: actions/checkout@v4
 
       - name: Run a one-line script
