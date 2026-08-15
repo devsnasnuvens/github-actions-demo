@@ -26,7 +26,7 @@ jobs:
         uses: actions/github-script@v7
         with:
           input_secret: ${{ secrets.SEGREDO_SECRETO }} # SECRET AS AN INPUT FOR ACTION
-          script: echo "Hello, world!"
+          script: echo Hello, world with GitHub Actions!
 
       - name: Run a multi-line script
         run: |
