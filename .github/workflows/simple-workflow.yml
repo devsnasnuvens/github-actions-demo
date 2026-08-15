@@ -22,6 +22,12 @@ jobs:
           environment_variable_secret: ${{ secrets.SEGREDO_SECRETO }} # SECRET AS ENVIRONMENT VARIABLE
         run: echo Hello, world!
 
+      - name: Run a one-line script with GitHub Actions
+        uses: actions/github-script@v7
+        with:
+          input_secret: ${{ secrets.SEGREDO_SECRETO }} # SECRET AS AN INPUT FOR ACTION
+          script: echo "Hello, world!"
+
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
